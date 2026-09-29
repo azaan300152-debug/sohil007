@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sohil Hair Cut – Sohil ke bare me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #110506;
+            --bg2: #1a0a0c;
+            --panel: #210d10;
+            --red: #e11d2e;
+            --neon: #ff4655;
+            --ink: #f7ecec;
+            --mute: #bd9fa2;
+            --line: rgba(255, 70, 85, .22);
+            --glow: 0 0 18px rgba(255, 70, 85, .35);
+            --head: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+            --body: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--body);
+            line-height: 1.65;
+            overflow-x: hidden;
+            background-image: radial-gradient(900px 500px at 85% -5%, rgba(225, 29, 46, .22), transparent 60%),
+                radial-gradient(700px 500px at -10% 60%, rgba(225, 29, 46, .10), transparent 60%);
+            background-attachment: fixed;
+            animation: pageEnterDescribe 0.65s cubic-bezier(0.22,1,0.36,1) both;
+        }
+
+        @keyframes pageEnterDescribe {
+            from { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+            to   { opacity: 1; transform: none;             filter: blur(0);   }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--neon);
+            outline-offset: 3px
+        }
+
+        .wrap {
+            width: min(1120px, 92%);
+            margin-inline: auto
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(17, 5, 6, .78);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px
+        }
+
+        .logo {
+            font-family: var(--head);
+            font-size: 1.5rem;
+            letter-spacing: .04em
+        }
+
+        .logo b {
+            color: var(--neon);
+            font-weight: 400;
+            text-shadow: var(--glow)
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            font-size: .92rem;
+            color: var(--mute)
+        }
+
+        .nav-links a {
+            transition: color .25s
+        }
+
+        .nav-links a:hover {
+            color: var(--ink)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 26px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: .95rem;
+            border: 1.5px solid var(--red);
+            cursor: pointer;
+            transition: transform .25s, box-shadow .25s, background .25s;
+        }
+
+        .btn.solid {
+            background: var(--red);
+            color: #fff;
+            box-shadow: 0 0 0 rgba(255, 70, 85, 0)
+        }
+
+        .btn.solid:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 26px rgba(225, 29, 46, .5)
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--ink)
+        }
+
+        .btn.ghost:hover {
+            transform: translateY(-3px);
+            background: rgba(225, 29, 46, .14);
+            box-shadow: var(--glow)
+        }
+
+        .nav-cta {
+            padding: 9px 20px;
+            font-size: .88rem
+        }
+
+        /* HERO */
+        .hero {
+            padding: 56px 0 90px;
+            position: relative
+        }
+
+        .hero .wrap {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 40px;
+            min-height: calc(100vh - 64px - 40px);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: .85rem;
+            color: var(--neon);
+            border: 1px solid var(--line);
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(225, 29, 46, .08);
+            margin-bottom: 22px;
+            animation: rise .8s .1s both;
+        }
+
+        h1 {
+            font-family: var(--head);
+            font-weight: 400;
+            line-height: .95;
+            font-size: clamp(3.4rem, 9.5vw, 7.4rem);
+            letter-spacing: .01em;
+            text-transform: uppercase;
+        }
+
+        h1 .l {
+            display: block;
+            overflow: hidden
+        }
+
+        h1 .l span {
+            display: block;
+            transform: translateY(105%);
+            animation: up .9s cubic-bezier(.2, .8, .2, 1) forwards
+        }
+
+        h1 .l:nth-child(1) span {
+            animation-delay: .25s
+        }
+
+        h1 .l:nth-child(2) span {
+            animation-delay: .42s;
+            color: var(--red);
+            text-shadow: 0 0 26px rgba(255, 70, 85, .45)
+        }
+
+        h1 .l:nth-child(3) span {
+            animation-delay: .6s
+        }
+
+        /* scissor cut line */
+        .cutline {
+            position: relative;
+            height: 34px;
+            margin: 18px 0 20px;
+            max-width: 440px
+        }
+
+        .cutline .dash {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 0;
+            width: 0;
+            border-top: 2px dashed var(--neon);
+            filter: drop-shadow(0 0 5px rgba(255, 70, 85, .7));
+            animation: draw 1.6s 1s cubic-bezier(.6, .1, .3, 1) forwards;
+        }
+
+        .cutline svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 34px;
+            height: 34px;
+            animation: slide 1.6s 1s cubic-bezier(.6, .1, .3, 1) forwards;
+            transform: translateX(0);
+        }
+
+        .cutline .blade {
+            transform-origin: 12px 17px;
+            animation: snip .32s 1s 5 alternate ease-in-out
+        }
+
+        .cutline .blade2 {
+            transform-origin: 12px 17px;
+            animation: snip2 .32s 1s 5 alternate ease-in-out
+        }
+
+        .lead {
+            color: var(--mute);
+            max-width: 490px;
+            font-size: 1.05rem;
+            animation: rise .9s 1.2s both
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+            animation: rise .9s 1.4s both
+        }
+
+        /* hero picture */
+        .pic {
+            position: relative;
+            display: grid;
+            place-items: center;
+            animation: fade 1.2s .3s both
+        }
+
+        .pic-stage {
+            position: relative;
+            width: min(440px, 100%);
+            aspect-ratio: 4/5;
+            transform-style: preserve-3d;
+            transition: transform .15s ease-out
+        }
+
+        .pic-stage::before {
+            content: "";
+            position: absolute;
+            inset: 8% 6% 2%;
+            border-radius: 42% 58% 46% 54% / 48% 44% 56% 52%;
+            background: radial-gradient(circle at 50% 35%, #ff3346, #a4111f 55%, #4a070d);
+            box-shadow: 0 0 60px rgba(225, 29, 46, .5), inset 0 0 40px rgba(0, 0, 0, .35);
+            animation: morph 9s ease-in-out infinite;
+        }
+
+        .ring {
+            position: absolute;
+            inset: 2%;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(255, 70, 85, .5);
+            animation: spin 26s linear infinite;
+        }
+
+        .pic img {
+            position: absolute;
+
+            left: 50%;
+            bottom: 15%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 700px;
+            object-fit: contain;
+            object-position: center bottom;
+            filter: drop-shadow(0 18px 24px rgba(0, 0, 0, .55));
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .chip {
+            position: absolute;
+            background: rgba(26, 10, 12, .88);
+            backdrop-filter: blur(6px);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 9px 16px;
+            font-size: .82rem;
+            box-shadow: var(--glow);
+            white-space: nowrap;
+        }
+
+        .chip b {
+            color: var(--neon);
+            font-weight: 600
+        }
+
+        .chip.a {
+            left: -4%;
+            top: 16%;
+            animation: float 4.4s ease-in-out infinite
+        }
+
+        .chip.b {
+            right: -2%;
+            bottom: 14%;
+            animation: float 5.2s -1.5s ease-in-out infinite
+        }
+
+        /* MARQUEE */
+        .marquee {
+            border-block: 1px solid var(--line);
+            background: var(--bg2);
+            overflow: hidden;
+            padding: 16px 0;
+        }
+
+        .track {
+            display: flex;
+            gap: 44px;
+            width: max-content;
+            animation: scroll 28s linear infinite
+        }
+
+        .track span {
+            font-family: var(--head);
+            font-size: 1.5rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 44px;
+            white-space: nowrap;
+            color: var(--ink);
+        }
+
+        .track span::after {
+            content: "✂";
+            color: var(--neon);
+            font-size: 1.2rem;
+            text-shadow: var(--glow)
+        }
+
+        /* SECTIONS */
+        section.block {
+            padding: 96px 0
+        }
+
+        h2 {
+            font-family: var(--head);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            margin-top: 14px;
+            border-radius: 4px;
+            background: var(--red);
+            box-shadow: var(--glow);
+        }
+
+        .rv {
+            opacity: 0;
+            transform: translateY(34px);
+            transition: opacity .8s, transform .8s cubic-bezier(.2, .8, .2, 1)
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* about */
+        .about {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 56px;
+            align-items: start
+        }
+
+        .about p {
+            color: var(--mute);
+            margin-bottom: 16px;
+            max-width: 560px
+        }
+
+        .about p strong {
+            color: var(--ink);
+            font-weight: 500
+        }
+
+        .stats {
+            display: grid;
+            gap: 16px
+        }
+
+        .stat {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px 26px;
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            transition: border-color .3s, box-shadow .3s;
+        }
+
+        .stat:hover {
+            border-color: var(--neon);
+            box-shadow: var(--glow)
+        }
+
+        .stat .n {
+            font-family: var(--head);
+            font-size: 3.2rem;
+            line-height: 1;
+            color: var(--neon);
+            min-width: 110px
+        }
+
+        .stat .t {
+            color: var(--mute);
+            font-size: .95rem
+        }
+
+        /* services */
+        .services {
+            background: var(--bg2);
+            border-block: 1px solid var(--line)
+        }
+
+        .svc-list {
+            margin-top: 34px;
+            max-width: 820px
+        }
+
+        .svc {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 8px 20px;
+            align-items: center;
+            padding: 22px 4px;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            transition: padding .35s;
+        }
+
+        .svc::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 2px;
+            width: 0;
+            background: var(--neon);
+            box-shadow: var(--glow);
+            transition: width .5s;
+        }
+
+        .svc:hover {
+            padding-left: 16px
+        }
+
+        .svc:hover::before {
+            width: 100%
+        }
+
+        .svc h3 {
+            font-size: 1.15rem;
+            font-weight: 600
+        }
+
+        .svc p {
+            color: var(--mute);
+            font-size: .92rem;
+            grid-column: 1
+        }
+
+        .svc .price {
+            font-family: var(--head);
+            font-size: 1.7rem;
+            color: var(--neon);
+            grid-row: 1/3;
+            grid-column: 2
+        }
+
+        /* process */
+        .steps {
+            margin-top: 40px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 26px
+        }
+
+        .steps::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 27px;
+            border-top: 2px dashed var(--line);
+        }
+
+        .step {
+            position: relative;
+            padding-top: 0
+        }
+
+        .dot {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--bg);
+            border: 2px solid var(--red);
+            font-family: var(--head);
+            font-size: 1.5rem;
+            color: var(--neon);
+            position: relative;
+            z-index: 1;
+            box-shadow: var(--glow);
+            margin-bottom: 18px;
+            transition: background .3s, color .3s;
+        }
+
+        .step:hover .dot {
+            background: var(--red);
+            color: #fff
+        }
+
+        .step h3 {
+            font-size: 1.08rem;
+            margin-bottom: 6px
+        }
+
+        .step p {
+            color: var(--mute);
+            font-size: .92rem
+        }
+
+        /* contact */
+        .contact {
+            background: linear-gradient(135deg, #3a0910, #8e0f1c 55%, #c81627);
+            border-radius: 28px;
+            padding: 54px 48px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 36px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(225, 29, 46, .28);
+        }
+
+        .contact::after {
+            content: "✂";
+            position: absolute;
+            right: -20px;
+            bottom: -60px;
+            font-size: 15rem;
+            opacity: .07;
+            transform: rotate(-20deg);
+        }
+
+        .contact h2::after {
+            background: #fff;
+            box-shadow: none
+        }
+
+        .contact p {
+            color: #ffdede;
+            max-width: 430px
+        }
+
+        .info {
+            display: grid;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .info div {
+            background: rgba(0, 0, 0, .28);
+            border-radius: 14px;
+            padding: 14px 18px;
+            font-size: .95rem
+        }
+
+        .info small {
+            display: block;
+            color: #ffc4c8;
+            font-size: .78rem
+        }
+
+        .contact .btn.solid {
+            background: #fff;
+            color: var(--red);
+            border-color: #fff
+        }
+
+        .contact .btn.ghost {
+            border-color: #fff
+        }
+
+        .contact .hero-btns {
+            animation: none;
+            margin-top: 24px
+        }
+
+        footer {
+            text-align: center;
+            color: var(--mute);
+            font-size: .85rem;
+            padding: 36px 0 44px
+        }
+
+        /* KEYFRAMES */
+        @keyframes up {
+            to {
+                transform: none
+            }
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(22px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: scale(.94)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @keyframes draw {
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes slide {
+            to {
+                transform: translateX(calc(min(440px, 86vw) - 34px))
+            }
+        }
+
+        @keyframes snip {
+            to {
+                transform: rotate(-16deg)
+            }
+        }
+
+        @keyframes snip2 {
+            to {
+                transform: rotate(16deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        .pic img {
+            animation-name: floatImg
+        }
+
+        @keyframes floatImg {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0)
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-12px)
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes morph {
+
+            0%,
+            100% {
+                border-radius: 42% 58% 46% 54% / 48% 44% 56% 52%
+            }
+
+            50% {
+                border-radius: 56% 44% 58% 42% / 44% 56% 44% 56%
+            }
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(calc(-50% - 22px))
+            }
+        }
+
+        /* PHONE + TABLET */
+        @media (max-width:900px) {
+            .nav-links {
+                display: none
+            }
+
+            .pic img {
+
+
+                left: 50%;
+                bottom: 15%;
+
+                width: 400px;
+                height: 400px;
+            }
+
+            .hero {
+                padding: 28px 0 64px
+            }
+
+            .hero .wrap {
+                grid-template-columns: 1fr;
+                min-height: 0;
+                gap: 22px;
+                text-align: center
+            }
+
+            .pic {
+                order: -1
+            }
+
+            /* photo phone me sabse upar */
+            .pic-stage {
+                width: min(320px, 78vw)
+            }
+
+            .chip.a {
+                left: 0
+            }
+
+            .chip.b {
+                right: 0
+            }
+
+            .lead {
+                margin-inline: auto
+            }
+
+            .hero-btns {
+                justify-content: center
+            }
+
+            .cutline {
+                margin-inline: auto
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr
+            }
+
+            .steps {
+                grid-template-columns: 1fr 1fr;
+                gap: 34px 22px
+            }
+
+            .steps::before {
+                display: none
+            }
+
+            .contact {
+                padding: 38px 24px
+            }
+
+            section.block {
+                padding: 70px 0
+            }
+        }
+
+        @media (max-width:480px) {
+            .steps {
+                grid-template-columns: 1fr
+            }
+
+            .btn {
+                padding: 12px 22px
+            }
+
+            .chip {
+                font-size: .74rem;
+                padding: 7px 12px
+            }
+
+            .stat .n {
+                font-size: 2.6rem;
+                min-width: 90px
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important
+            }
+
+            h1 .l span {
+                transform: none
+            }
+
+            .rv {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: opacity(0.5);
+            opacity: 0.5;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop class="bg-video">
+        <source src="neon.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <div class="wrap">
+            <!-- BACK button: href me apna link daalein (abhi ye pichle page par wapas le jaata hai) -->
+            <!-- <a href="index.html" class="btn ghost nav-cta">&larr; BACK</a> -->
+            <a href="javascript:history.back()" class="btn ghost nav-cta">&larr; BACK</a>
+
+            <div class="nav-links">
+                <a href="#about">ABOUT SOHIL</a>
+                <a href="#services">SERVICES</a>
+                <a href="#kaam">WORK</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <a class="btn solid nav-cta" data-call href="tel:+917355954554">CALL NOW</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="wrap">
+            <div class="copy">
+                <span class="tag">NEW SALOON IS OPEN NOW</span>
+                <h1>
+                    <span class="l"><span>Sohil</span></span>
+                    <span class="l"><span>Hair Cut</span></span>
+                </h1>
+                <div class="cutline" aria-hidden="true">
+                    <span class="dash"></span>
+                    <svg viewBox="0 0 34 34" fill="none" stroke="#ff4655" stroke-width="2.4" stroke-linecap="round">
+                        <circle cx="8" cy="26" r="4.5" />
+                        <circle cx="8" cy="8" r="4.5" />
+                        <line class="blade" x1="12" y1="12" x2="32" y2="26" />
+                        <line class="blade2" x1="12" y1="22" x2="32" y2="8" />
+                    </svg>
+                </div>
+                <p class="lead">Sohil is an experienced hair stylist who has opened his own salon. Every cut comes with
+                    cleanliness, attention, and a style perfect for your face.</p>
+                <div class="hero-btns">
+                    <a class="btn solid" data-call href="tel:+917355954554">Call Now...</a>
+                    <a class="btn ghost" data-wa href="https://wa.me/917355954554" target="_blank"
+                        rel="noopener">Whatsapp Now...</a>
+                </div>
+            </div>
+
+            <div class="pic">
+                <div class="pic-stage" id="stage">
+                    <div class="ring"></div>
+                    <!-- YAHAN APNI PNG LAGAYEIN: src="sohil.png" -->
+                    <img id="sohilImg" src="sohil.png" alt="Sohil – Hair Stylist">
+                    <div class="chip a"><b>Sohil</b> · Hair Stylist</div>
+                    <div class="chip b">Clean cut · <b>Sharp finish</b></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+        <div class="track" id="track">
+            <span>Hair Cut</span><span>Beard Trim</span><span>Styling</span><span>Hair Spa</span><span>Head
+                Massage</span><span>Kids Cut</span>
+        </div>
+    </div>
+
+    <section class="block" id="about">
+        <div class="wrap about">
+            <div class="rv">
+                <h2>ABOUT SOHIL</h2>
+                <p><strong>Sohil</strong> He has been passionate about cutting hair since childhood. After working in
+                    other salons for years, he learned all kinds of cuts, fades, and beard styles, and now he has opened
+                    his own salon.</p>
+                <p>Here you <strong>It wasn't cut in a hurry</strong>,Actually, you'll get a style made after looking at
+                    your face, hair type, and preference. First, we talk with every customer, then do the work.</p>
+                <p>Clean tools, the right product, and a calm environment. This is Sohil's way.</p>
+            </div>
+            <div class="stats rv">
+                <div class="stat"><span class="n" data-to="5" data-suffix="+">0</span><span class="t">Year of
+                        experience</span></div>
+                <div class="stat"><span class="n" data-to="1000" data-suffix="+">0</span><span class="t">Happy
+                        customers</span></div>
+                <div class="stat"><span class="n" data-to="30" data-suffix="+">0</span><span class="t">Various
+                        styles</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block services" id="services">
+        <div class="wrap">
+            <h2 class="rv">Services</h2>
+            <div class="svc-list">
+                <div class="svc rv">
+                    <h3>Hair Cut</h3>
+                    <p>Cut and clean finishing according to your face</p><span class="price">₹100</span>
+                </div>
+                <div class="svc rv">
+                    <h3>Beard Trim / Shave</h3>
+                    <p>Sharp line-up aur smooth shave</p><span class="price">₹60</span>
+                </div>
+                <div class="svc rv">
+                    <h3>Hair Styling</h3>
+                    <p>Fade, taper, textured aur trending styles</p><span class="price">₹150</span>
+                </div>
+                <div class="svc rv">
+                    <h3>Hair Spa & Head Massage</h3>
+                    <p>Thakaan utaare, baalon ko jaan de</p><span class="price">₹250</span>
+                </div>
+                <div class="svc rv">
+                    <h3>Kids Cut</h3>
+                    <p>Pyaar se aur bina dare, bachon ke liye alag dhyan</p><span class="price">₹80</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="kaam">
+        <div class="wrap">
+            <h2 class="rv">How does Sohil work?</h2>
+            <div class="steps">
+                <div class="step rv">
+                    <div class="dot">1</div>
+                    <h3>First Talk</h3>
+                    <p>He listens to what kind of look you want and gives the right advice.</p>
+                </div>
+                <div class="step rv">
+                    <div class="dot">2</div>
+                    <h3>Clean Preparation</h3>
+                    <p>Naya cape, saaf tools aur baalon ki sahi prep.</p>
+                </div>
+                <div class="step rv">
+                    <div class="dot">3</div>
+                    <h3>Cut and style</h3>
+                    <p>Dhyan se, bina jaldbaazi ke. Har angle se barabar.</p>
+                </div>
+                <div class="step rv">
+                    <div class="dot">4</div>
+                    <h3>Final finish</h3>
+                    <p>He only lets go when he sees you happy in the mirror.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="contact" style="padding-top:20px">
+        <div class="wrap">
+            <div class="contact rv">
+                <div style="position:relative;z-index:1">
+                    <h2>Aaj hi apna look badlein</h2>
+                    <p>Walk-ins are welcome. To avoid the crowd, call or WhatsApp first.</p>
+                    <div class="hero-btns">
+                        <a class="btn solid" data-call href="tel:+917355954554">Call Now</a>
+                        <a class="btn ghost" data-wa href="https://wa.me/917355954554" target="_blank"
+                            rel="noopener">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div><small>Address</small><span id="addr">Musanagar Kanpur 209208</span></div>
+                    <div><small>Samay</small><span id="hours">Morning 9:00 To Night 11:00 </span></div>
+                    <div><small>Phone</small><span id="phoneTxt">+91 7355954554</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>© <span id="yr"></span> DEVELOPER OP SOHIL </footer>
+
+    <script>
+        /* ====== YAHAN APNI DETAILS BADLEIN ====== */
+        const CONFIG = {
+            phone: "7355954554",          // country code ke saath, bina + ya space (India: 91...)
+            phoneShow: "+91 7355954554",
+            address: "Musanagar Kanpur 209208",
+            hours: "Morning 9:00 To Night 11:00 "
+        };
+        /* ======================================== */
+
+        // contact set
+        document.querySelectorAll('[data-call]').forEach(a => a.href = 'tel:+' + CONFIG.phone);
+        document.querySelectorAll('[data-wa]').forEach(a => a.href = 'https://wa.me/' + CONFIG.phone + '?text=' + encodeURIComponent('hi Sohil, mujhe appointment book karni hai.'));
+        document.getElementById('phoneTxt').textContent = CONFIG.phoneShow;
+        document.getElementById('addr').textContent = CONFIG.address;
+        document.getElementById('hours').textContent = CONFIG.hours;
+        document.getElementById('yr').textContent = new Date().getFullYear();
+
+        // marquee: duplicate for seamless loop
+        const track = document.getElementById('track');
+        track.innerHTML += track.innerHTML;
+
+        // image fallback if sohil.png not found
+        const img = document.getElementById('sohilImg');
+        img.addEventListener('error', () => {
+            img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><circle cx="200" cy="170" r="80" fill="#f2c9b8"/><path d="M110 150c0-70 60-95 100-90 50 5 85 40 80 90-25-30-60-40-100-38-40 2-60 15-80 38z" fill="#1c1c1c"/><path d="M60 500c5-110 60-170 140-170s135 60 140 170z" fill="#111"/><text x="200" y="440" font-family="Arial" font-size="20" fill="#ff4655" text-anchor="middle">sohil.png yahan lagayein</text></svg>');
+        }, { once: true });
+
+        // scroll reveal
+        const io = new IntersectionObserver(es => {
+            es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: .15 });
+        document.querySelectorAll('.rv').forEach((el, i) => {
+            el.style.transitionDelay = (i % 4) * 90 + 'ms';
+            io.observe(el);
+        });
+
+        // counters
+        const cio = new IntersectionObserver(es => {
+            es.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target, to = +el.dataset.to, suf = el.dataset.suffix || '';
+                const t0 = performance.now(), dur = 1600;
+                (function tick(t) {
+                    const p = Math.min((t - t0) / dur, 1), v = Math.round(to * (1 - Math.pow(1 - p, 3)));
+                    el.textContent = v + (p === 1 ? suf : '');
+                    if (p < 1) requestAnimationFrame(tick);
+                })(t0);
+                cio.unobserve(el);
+            });
+        }, { threshold: .6 });
+        document.querySelectorAll('.n').forEach(n => cio.observe(n));
+
+        // hero image tilt (desktop mouse only)
+        const stage = document.getElementById('stage');
+        if (matchMedia('(hover:hover) and (min-width:901px)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+            const hero = document.querySelector('.hero');
+            hero.addEventListener('mousemove', e => {
+                const r = hero.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+                stage.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 8}deg)`;
+            });
+            hero.addEventListener('mouseleave', () => stage.style.transform = '');
+        }
+    </script>
+
+    <!-- Page transition overlay -->
+    <div id="pt-overlay" style="position:fixed;inset:0;background:#110506;z-index:99999;pointer-events:none;opacity:0;transition:opacity 0.48s ease;"></div>
+
+    <script>
+        // Cinematic page-exit for all local links
+        (function(){
+            const overlay = document.getElementById('pt-overlay');
+            document.querySelectorAll('a[href]').forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') ||
+                    href.startsWith('mailto:') || href.startsWith('tel:') ||
+                    link.target === '_blank') return;
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const dest = this.getAttribute('href');
+                    overlay.style.pointerEvents = 'all';
+                    overlay.style.opacity = '1';
+                    setTimeout(() => { window.location.href = dest; }, 460);
+                });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
